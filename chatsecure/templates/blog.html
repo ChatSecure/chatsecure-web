@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block title %}ChatSecure Blog{% endblock %}
+{% block content %}
+<h1>Blog</h1>
+
+<a name="10" href="/blog#10"><h2>ChatSecure v1.5 Released - 12/13/2012</h2></a>
+<p>
+In November we added Tibetan translations, better fingerprint verification UI, and added an in-app language switcher. We also introduced a crash-on-launch bug that affected certain locales. This should be fixed in v1.5.1.
+<ul>
+	<li>More/updated localizations merged into the app
+	<li>Tibetan translation now works
+	<li>Improved fingerprint verification user interface
+	<li>In-app language switcher for changing to languages not supported by the OS (e.g. Tibetan)
+	<li><b>v1.5.1</b> Fix crash on launch bug and localization switcher
+</ul>
+ <a href="http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8">Free Download</a> (<a href="https://github.com/chrisballinger/Off-the-Record-iOS/compare/v1.4...v1.5.1">changelog</a>)
+</p>
+
+<a name="9" href="/blog#9"><h2>ChatSecure v1.4 Released - 11/5/2012</h2></a>
+<p>
+In October we finished up v1.4 which includes XEP-0184 (delivery receipts), XEP-0085 (chat state) and a redesigned login screen. We have also been working on privacy-minded solutions to the lack of push messaging support (ChatSecure Push Server) as well as additional avenues for backgrounded sockets.
+<ul>
+	<li>XEP-0184: Delivery receipts. This feature is in Gibberbot as well, which allows for clients to be notified when their messages are received by the other chat participant.
+	<li>XEP-0085: Chat State. This feature allows users to see when other people are typing a message, and gives them the option to send those notifications as well.
+	<li>Redesigned login screen: Completely refactored the login screen to be more extensible in the future. We also added a port field for custom XMPP servers.
+	<li><a href="https://github.com/ChatSecure/ChatSecure-Push-Server">ChatSecure Push Server</a>: A working proof-of-concept server has been built, and we are now working on client integration, as well as other options to allow for long running background sockets.
+</ul>
+ <a href="http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8">Free Download</a> (<a href="https://github.com/chrisballinger/Off-the-Record-iOS/compare/v1.3...v1.4">changelog</a>)
+</p>
+
+<a name="8" href="/blog#8"><h2>ChatSecure v1.3 Released - 9/24/2012</h2></a>
+<p>
+What's New in Version 1.3
+<ul> 
+	<li>Multiple simultaneous account support! (Facebook, GTalk, AIM, XMPP)</li>
+	<li>Option to remember account passwords in iOS keychain</li>
+	<li>User interface improvements</li>
+	<li>Many, many bug fixes</li>
+	<li>Upgrade to libotr 4.0.0</li>
+	<li>iOS 6 and iPhone 5 support</li>
+	<li>Removes support for armv6 devices and now has a minimum requirement of iOS 4.3. Sorry!</li>
+</ul>
+<a href="http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8">Free Download</a> (<a href="https://github.com/chrisballinger/Off-the-Record-iOS/compare/v1.2...v1.3">changelog</a>)
+</p>
+
+<a name="7" href="/blog#7"><h2>Chupamobile's Response - 8/14/2012</h2></a>
+<img src="{{STATIC_URL}}images/chupamobile-copyright.jpg">
+
+Stefano Argiolas, co-founder of Chupamobile, has replied to me and removed all unauthorized work by that user. Thanks! Here is a copy of the email I received (the image at the top of this post was attached):
+
+<p><pre>Hi Chris,
+I’m Stefano Argiolas, co-founder of Chupamobile.
+I have been informed about the Copyright infringement on your product Secured Chat that ha s been published on Chupamobile.
+ 
+First of all I want to personally apologize for the happening, we take copyright infringement very seriously, and what’s happening is very sad.
+ 
+When a user sign-up on the marketplace he accepts the Developer T&C, but we all know that not everybody are going to carefully read the T&C of a website, that’s why as a last submission step of a product we ask the user to confirm that:
+Any material (e.g. images, videos, icons, sounds, or other assets) that are not my own work, have been licensed for use in the file preview or main download. Other than these items, this work is entirely my own and I have full rights to sell it on ChupaMobile.com (see image attached)
+ 
+We never experienced a copyright infringement until now, the user GreatAlexSan published some products grabbing them from the hard work of other developers.
+The good news is that your product did not generated any sales. We have now blocked the user and removed all the items published from that user.
+ 
+Again, apologize from our side, please don’t hesitate to contact me personally at xxxx if you have any questions.
+ 
+At your disposal,
+Stefano Argiolas</pre>
+
+<p>Also, after reading the comments on Hacker News I have decided to relicense all future versions of the software as GPLv3 until further notice.</p>
+
+
+<a name="6" href="/blog#6"><h2>My Own DMCA Takedown - 8/14/2012</h2></a>
+<p>
+	A user on Chupamobile, a site for "Free and Premium Tutorials and Projects Source Codes for Mobile App Development", was found selling licenses to my source code, as well as the source code of many other open source projects, for $13.99-$59.99. I was only aware of this because <a href="https://github.com/chrisballinger/Off-the-Record-iOS/issues/50">Mark Pospesel opened a ticket</a> on my Github Issues page, and later emailed by <a href="https://twitter.com/romainbriche">Romain Briche</a>. (Thanks guys!)
+</p>
+<p>
+	The only real problem I have with this is that he is blatantly plagiarizing my work. He wasn't even smart enough to use a different logo or obfuscate the original code. (Do they teach <em>anything</em> in school these days?) <strike>My software is even <a href="https://raw.github.com/chrisballinger/Off-the-Record-iOS/master/LICENSE">permissively BSD licensed</a>. I realize the BSD allows people to sell my binaries and source but I do not believe it authorizes them to sell the source under a different license.</strike> (edit: It is now GPL licensed. Many people pointed out that I was wrong and that the BSD explicitly allows for this. However, chances are he removed my copyright notices like he did for <a href="https://twitter.com/mattgemmell/status/235302914258792448">Matt Gemmell</a>, which is a clear violation of the BSD license.) He is attempting to relicense the software as such:
+	<pre><code>Regular License - $13.99
+
+The regular license allows the use of the purchased item in a project for either 
+personal or commercial uses, without the payment of any further fees or charges
+after the initial download cost.
+The regular license gives you the right to use the purchased items within 1 
+project of your own or on behalf of a client (commercial, personal, or non-profit).
+You or your client cannot offer the item up for resale either on its own or as part
+ of a project.
+Items purchased under a regular license must not be redistributed or resold “as-
+is” or as part of any other collection of files.
+
+What you can do:
+You can integrate the component in 1 APP.
+You can be distribute it only as a binary only (You cannot distribute Source Code).
+Commercial use is allowed.
+You can customize the Source Code.</code></pre>
+</p>
+<p>
+	So, I did some research (ping/whois/geoip), and sent my very own DMCA takedown request to Chupamobile, Amazon AWS, and Cloudflare. In the past I have been very critical of the chilling effect laws like the DMCA can have on free speech, but this case feels like a very legitimate application of the law. Chupamobile is a UK company but hosted by Amazon AWS in the US, so the DMCA is still applicable (to my knowledge).
+</p>
+</p>
+<p>
+	<a href="http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8">Download ChatSecure for free</a> from the App Store, and get the <em>real</em> <a href="https://github.com/chrisballinger/Off-the-Record-iOS">source code</a> for $0.00 on Github.
+</p>
+<p>
+	I'll update this post when I have more information. <a href="http://news.ycombinator.com/item?id=4379999">Discuss this post on Hacker News</a>.
+</p>
+
+
+<a name="5" href="/blog#5"><h2>v1.3 Status Update - 8/10/2012</h2></a>
+<p>
+A number of changes have been committed to the master branch since the last status update:
+<ul>
+	<li>The refactoring required for multiple account support is almost complete.</li>
+	<li>Global XMPP SSL certificate verification preferences have been removed and have been replaced with per-account settings. (Thanks to Chris Gahan for mentioning it before it was ever a problem)
+	<ul>
+		<li>Currently there is no UI for relaxing the cert checks anymore, but the underlying code is in place. This will need to be hooked up toOTRLoginViewController and tested thoroughly before v1.3 submission.</li>
+	</ul></li>
+	<li>Some UI elements have been simplified or merged into other views.
+	<ul>
+		<li>The Conversations view (only available on iPhone) has been eliminated and has been replaced by an editable "Recents" list at the top of your Buddy List on both iPhone and iPad.</li>
+		<li>Adding accounts is now done directly from the Settings screen.</li>
+	</ul></li>
+	<li>Fixes have been made to the logic for when to show message notifications
+	<ul>
+		<li>It also doesn't crash anymore when trying to reply under certain scenarios</li>
+	</ul></li>
+	<li>Support for sharing a link to the App via Twitter on iOS 5 and higher.</li>
+</ul>
+There are still some issues related to not properly downgrading back to plaintext aftercancelinga secure conversation that need to be fixed before the next update as well. Once that is figured out, we should be on track for submission to the App Store very soon!
+</p>
+
+<a name="4" href="/blog#4"><h2>ChatSecure v1.3 Progress - 7/31/2012</h2></a>
+<p>I have been mainly working on UI / usability improvements and trying to iron out some persistent bugs. Here are the things that still need to be done before the 1.3 release:
+<ul>
+	<li>Figure out how to properly downgrade conversation to plaintext (Ian's explanation on the otr-dev mailing list wasn't clear to me, so maybe Miron could be of help)
+		<ul>
+			<li>Hopefully this will fix the "missing messages" bug.</li>
+		</ul>
+	</li>
+	<li>Rigorously test the security of the new password storage mechanism (uses iOS keychain)</li>
+<li>Make the XMPP SSL certificate-checking options (hostname mismatch, or allowing self-signing) per-account, rather than global, and only for custom XMPP accounts.
+<ul><li>Implement SSL cert verification if possible.</li></ul>
+</li>
+<li>Fix the "multiple conversations with the same buddy" bug.</li>
+</ul>
+</p>
+
+<a name="3" href="/blog#3"><h2>We have a Mailing List - 7/10/2012</h2></a>
+<p>We now have a <a href="https://groups.google.com/forum/#!forum/chatsecure">Google Group</a> for public discussion about the app. Feel free to join!</p>
+<p>In other news, we are moving ahead with multiple account support and better UI integration with other XMPP services like Facebook, Jabber, Google Apps, and custom servers. Expect v1.3 to be on the App Store in the next few weeks. We are considering dropping AIM support in a future release because the <a href="https://github.com/unixpickle/LibOrange">LibOrange</a> library seems to be dead. If you still use AIM and would like to see it kept in the app, please make your voice heard!</p>
+<p>Also, if have a paid iOS developer account and are looking for longer-running background support, check out the <a href="https://github.com/chrisballinger/Off-the-Record-iOS/tree/background">background</a> branch on Github.</p>
+
+<a name="2" href="/blog#2"><h2>Version 1.2 Approved - 6/7/2012</h2></a>
+<a href="https://guardianproject.info/"><img src="{{STATIC_URL}}images/guardian_banner.png"></a>
+
+<p>I would like to announce a partnership with <a href="https://guardianproject.info/">The Guardian Project</a>, who develops the Android equivalent of ChatSecure called <a href="https://guardianproject.info/apps/gibber/">Gibberbot</a>, along with a whole suite of mobile security applications. It's an exciting time for open-source secure mobile communications!</p>
+
+<p>Version 1.2 has been approved! This new version includes support for limited <strong>background messaging</strong>, the #1 most requested feature. Yay!</p>
+
+<h3>Background Messaging</h3>
+
+<p>Unfortunately, Apple's policies prevent the creation of secure chat applications that run in the background indefinitely. The only way to get backgrounded sockets on iOS is to register your app as "VoIP", but unless you actually implement VoIP services, you will get rejected from the App Store. A common workaround used by other chat programs is to run the real chat client server-side and run a "push service" that sends the messages to your phone. That approach is unacceptable for this app because it would require me to build my own push server, which comes with quite a few drawbacks:
+<ul>
+    <li>Centralized storage of login credentials</li>
+    <li>Single point of failure</li>
+    <li>Vulnerable to eavesdropping</li>
+    <li>Expensive to build and maintain</li>
+    <li><a href="http://developer.apple.com/library/mac/#documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html">Maximum size allowed for a notification payload is 256 bytes</a>, and is "best effort" and not guaranteed.</li>
+</ul>
+The only other option is to 'trick' the OS into continuing to run the application in the background by starting a "long running task" during the <code>applicationDidEnterBackground:</code> in your app delegate, which in this case is an <code>NSTimer</code> set to fire every 10 seconds or so. The main limitation to this approach is that unless you manually restart the app every 10 minutes, it will be force-closed by the OS. This is similar to the technique used by the awesome <a href="http://verbs.im/">Verbs</a> app, who graciously helped me tackle this problem.
+</p>
+
+
+<a name="1" href="/blog#1"><h2>Version 1.2 Submitted - 5/28/2012</h2></a>
+<p>I pushed version 1.2 to the App Store on Friday. Here's a few things to look forward to:
+<ul>
+	<li>Background messaging!</li>
+	<li>Localizations</li>
+	<li>Settings</li>
+</ul>
+</p>
+{% endblock %}

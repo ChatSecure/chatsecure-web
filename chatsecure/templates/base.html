@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {% block head %}
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="ChatSecure : ChatSecure is a simple multiprotocol IM client for iOS that supports encrypted &quot;Off-the-Record&quot; messaging using Cypherpunks' libotr" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{STATIC_URL}}stylesheet.css">
+
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block body %}
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+              {% block header %}
+
+          <a id="forkme_banner" href="https://github.com/chrisballinger/Off-the-Record-iOS">View on GitHub</a>
+
+          <img id="project_title" src="{{STATIC_URL}}images/chatsecure-banner.png">
+          <h2 id="project_tagline">ChatSecure is a simple multiprotocol IM client for iOS that supports encrypted &quot;Off-the-Record&quot; messaging using Cypherpunks' libotr</h2>
+
+            <section class="nav_bar">
+                {% block nav_bar %}
+                {% for nav_item in nav_items %}
+                [<a class="navbar_link" href="/{{ nav_item.slug }}">
+                {% if nav_item.slug == slug %}
+                  <strong>{{ nav_item.title }}</strong>
+                {% else %}
+                  {{ nav_item.title }}
+                {% endif %}
+                </a>]
+                {% endfor %}
+                {% endblock %}
+            </section>
+
+
+            <section id="downloads">
+              <a class="coinbase-button pull-right" data-code="d665cd25e485c755c834a7dca1cdada9" data-button-style="donation_large" href="https://coinbase.com/checkouts/d665cd25e485c755c834a7dca1cdada9">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+              <a class="app_download_link" href="http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8">Download this app</a>
+              <a class="paypal_donate_link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EBAD4T4W66GE2">Donate using Paypal</a>
+            </section>
+                {% endblock %}
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+    {% block content %}
+    {% endblock %}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+            {% block footer %}
+        <p class="copyright">Maintained by <a href="http://chrisballinger.info">chrisballinger</a></p>
+            {% endblock %}
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-28188864-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+    {% endblock %}
+  </body>
+</html>

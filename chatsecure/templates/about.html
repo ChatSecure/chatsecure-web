@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}About ChatSecure{% endblock %}
+{% block content %}
+<h1>About</h1>
+
+<p>ChatSecure is an instant messaging client for iOS that integrates encrypted "Off the Record" messaging support from the <a href="http://www.cypherpunks.ca/otr/">libotr</a> library. It uses the <a href="https://github.com/unixpickle/LibOrange">LibOrange</a> library to handle all of the AIM (OSCAR) functionality and the <a href="http://code.google.com/p/xmppframework/">xmppframework</a> to handle Jabber/GTalk (XMPP).</p>
+
+</ol><h1>Compatibility</h1>
+
+<p><strong>Bold</strong> indicates it has been tested and works properly.</p>
+
+<h2>Native</h2>
+
+<ul>
+<li><strong><a href="http://adium.im/">Adium</a> (Mac OS X) - OTR works over both XMPP and Oscar.</strong></li>
+<li>climm (Unix-like), since (mICQ) 0.5.4.</li>
+<li>MCabber (Unix-like), since 0.9.4</li>
+<li>CenterIM (Unix-like), since 4.22.2</li>
+<li>Phoenix Viewer (successor of Emerald Viewer), a Second Life client (Cross-platform)</li>
+<li>Vacuum IM (Cross-platform)</li>
+<li>Jitsi (Cross-platform)</li>
+<li>BitlBee (Cross-platform), since 3.0 (optional at compile-time)</li>
+</ul><h2>Plug-in</h2>
+
+<ul>
+<li>
+<a href="http://pidgin.im/">Pidgin</a> (cross-platform), with <a href="http://www.cypherpunks.ca/otr/index.php#downloads">pidgin-otr</a> plugin.</li>
+<li>Kopete (Unix-like), either with a third-party plugin or, since the addition of Kopete-OTR on 12th of March 2008, with the version of Kopete shipped with KDE 4.1.0 and later releases.</li>
+<li>Miranda IM (Microsoft Windows), with a third-party plugin</li>
+<li>Psi (Cross-platform), with a third-party plugin and build, in Psi+ native usable</li>
+<li>Trillian (Microsoft Windows), with a third-party plugin</li>
+<li>irssi, with a third-party plugin</li>
+</ul><h2>Proxy (download <a href="http://www.cypherpunks.ca/otr/index.php#downloads">here</a>)</h2>
+
+<ul>
+<li>AOL Instant Messenger (Mac OS X, Microsoft Windows)</li>
+<li>iChat (Mac OS X)</li>
+<li>Proteus (Mac OS X)</li>
+</ul><h2>Phone apps</h2>
+
+<ul>
+<li>
+<a href="https://guardianproject.info/apps/gibber/">Gibberbot</a> (formerly OtRChat), a free and open source Android application (still in early development) produced by The Guardian Project, provides OTR protocol compatible over XMPP chat.</li>
+</ul><p><a href="http://en.wikipedia.org/wiki/Off-the-Record_Messaging#Client_support">Full List</a></p>
+
+<h1>License</h1>
+
+<pre><code>
+ChatSecure, an OTR-compatible iOS encrypted chat client
+Copyright (C) 2012, Chris Ballinger
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+</code></pre>
+
+<p>If you would like to relicense this code to sell it on the App Store, 
+please contact me at <a href="mailto:chris@chatsecure.org">chris@chatsecure.org</a>.</p>
+
+<p>This software additionally references or incorporates the following sources
+of intellectual property, the license terms for which are set forth
+in the sources themselves:</p>
+
+<h1>Third-party Libraries</h1>
+
+<p>The following dependencies are bundled with the ChatSecure, but are under
+terms of a separate license:</p>
+
+<ul>
+<li>
+<a href="http://www.cypherpunks.ca/otr/">Cypherpunks libotr</a> - provides the core encryption capabilities</li>
+<li>
+<a href="https://github.com/unixpickle/LibOrange">LibOrange</a> - handles all of the OSCAR (AIM) functionality</li>
+<li>
+<a href="https://github.com/robbiehanson/XMPPFramework">XMPPFramework</a> - XMPP support</li>
+<li>
+<a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> - a nice looking progress HUD</li>
+<li>
+<a href="https://github.com/mwaterfall/MWFeedParser">MWFeedParser</a> - Methods for escaping HTML strings</li>
+</ul><h1>Acknowledgements</h1>
+
+<ul>
+<li>
+<a href="http://nickhum.com/">Nick Hum</a> - awesome icon.</li>
+<li>
+<a href="http://glyphish.com/">Glyphish</a> - icons used on the tab bar.</li>
+<li>
+<a href="http://adium.im/">Adium</a> - lock/unlock icon used in chat window.</li>
+<li>
+<a href="http://www.iconfinder.com/icondetails/7043/128/aim_icon">Sergio Sánchez López</a> - AIM protocol icon.</li>
+<li>
+<a href="http://rocketdock.com/addon/icons/3462">Goxxy</a> - Google Talk icon.</li>
+<li>Localizations
+
+<ul>
+<li>
+<a href="http://www.personal.psu.edu/jwl5262/blogs/lin_portfolio/">Jiajuan Lin</a> (Chinese)</li>
+<li>
+<a href="http://jancborchardt.net/">Jan-Christoph Borchardt</a> (German)</li>
+<li>
+<a href="https://github.com/vitalyster">vitalyster</a> (Russian)</li>
+<li>
+<a href="https://www.transifex.net/accounts/profile/burhanteoman/">burhan teoman</a> (Turkish)</li>
+<li>
+<a href="https://www.transifex.net/accounts/profile/shikibiomernok/">shikibiomernok</a> (Hungarian)</li>
+</ul>
+</li>
+</ul>
+{% endblock %}
