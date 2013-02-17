@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
 
 
 class Post(models.Model):
@@ -13,6 +12,5 @@ class Post(models.Model):
     def __unicode__(self):
         return self.title
 
-    # http://www.rossp.org/blog/2006/jan/23/building-blog-django-1/
     def get_absolute_url(self):
-        return "/blog/%s/%s/" % (self.date.strftime("%Y/%m/%d").lower(), self.slug)
+        return "/blog/%s/" % self.slug
