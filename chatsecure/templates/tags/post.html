@@ -1,5 +1,5 @@
-<a name="{{ post.id }}" href="{{ post.get_absolute_url }}"><h2>{{ post.title }} - {{ post.date }}</h2></a>
-<h6>By {{ post.user }}</h6>
+<a name="{{ post.id }}" href="{{ post.get_absolute_url }}"><h2>{{ post.title }}</h2></a>
+<h6>By <a href="mailto:{{ post.user.email}}">{{ post.user.first_name }} {{ post.user.last_name }}</a> on {{ post.date }}</h6>
 <p>
 {{ post.body|safe }}
 </p>
