@@ -24,7 +24,3 @@ def view_post(request, slug):
             'slug': 'blog',
             'post': post,
         }, RequestContext(request))
-
-
-def root(request):
-    return ''
