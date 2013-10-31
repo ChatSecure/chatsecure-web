@@ -31,6 +31,11 @@ def contact(request):
             'slug': 'contact',
         }, RequestContext(request))
 
+def root(request):
+    return render_to_response('about.html', {
+            'nav_items': nav_items(),
+            'slug': 'about',
+        }, RequestContext(request))
 
 def webmaster_verification(request):
     return render_to_response('google319cdfb15ceafd92.html')
