@@ -22,5 +22,5 @@ urlpatterns = patterns('',
     url(r'^contact/', 'web.views.contact'),
     url(r'^google319cdfb15ceafd92.html', 'web.views.webmaster_verification'),
 
-    url(r'^$', 'blog.views.root'),
+    url(r'^$', 'web.views.root'),
 )
