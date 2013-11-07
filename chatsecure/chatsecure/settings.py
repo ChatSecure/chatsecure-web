@@ -1,11 +1,11 @@
 # Django settings for chatsecure project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Chris Ballinger', 'chris@chatsecure.org'),
 )
 
 MANAGERS = ADMINS
@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     # ChatSecure apps
     'blog',
     'web',
+    'django_extensions',
 )
 
 # A sample logging configuration. The only tangible logging
