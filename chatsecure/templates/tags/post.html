@@ -1,7 +1,5 @@
-{% load markup %}
-
 <a name="{{ post.id }}" href="{{ post.get_absolute_url }}"><h2>{{ post.title }}</h2></a>
-<h6>By <a href="mailto:{{ post.user.email}}">{{ post.user.first_name }} {{ post.user.last_name }}</a> on {{ post.date }}</h6>
+<h6>By <a href="mailto:{{ post.user.email }}">{{ post.user.first_name }} {{ post.user.last_name }}</a> on {{ post.date }}</h6>
 <p>
-{{ post.body|markdown:"safe" }}
+{{ post.body }}
 </p>

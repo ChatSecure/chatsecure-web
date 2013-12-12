@@ -123,12 +123,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'django.contrib.markup',
 
     # ChatSecure apps
     'blog',
     'web',
+
+    # External apps
     'django_extensions',
+    'south',
+    'markupfield'
 )
 
 # A sample logging configuration. The only tangible logging
