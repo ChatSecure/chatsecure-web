@@ -4,5 +4,6 @@ South==0.8.4
 django-extensions==1.2.5
 django-markupfield==1.2.0
 psycopg2==2.5.1
+python-memcached==1.53
 six==1.4.1
 wsgiref==0.1.2
